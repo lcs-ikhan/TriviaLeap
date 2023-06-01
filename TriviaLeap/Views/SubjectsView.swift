@@ -10,7 +10,25 @@ import SwiftUI
 struct SubjectsView: View {
     var body: some View {
         NavigationView{
-           
+            VStack{
+           Image("History")
+                    .resizable()
+                    .scaledToFit()
+                Text("History")
+                    .font(.title)
+                    .bold()
+                    
+                Divider()
+                
+                Image("Mythology")
+                    .resizable()
+                    .scaledToFit()
+                Text("Mythology")
+                    .font(.title)
+                    .bold()
+                
+            }
+            
         }
         .navigationTitle("Subjects")
     }
