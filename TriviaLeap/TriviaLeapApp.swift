@@ -11,7 +11,18 @@ import SwiftUI
 struct TriviaLeapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                SubjectsView()
+                    .tabItem{
+                        Label("Subjects", systemImage: "books.vertical.fill")
+                    }
+                
+                StatsView()
+                    .tabItem {
+                        Label("Wisdom", systemImage: "chart.bar.fill")
+                    }
+            }
+            SubjectsView()
         }
     }
 }

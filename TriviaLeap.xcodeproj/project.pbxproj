@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */; };
-		85B1263F2A29224700DC74F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263E2A29224700DC74F9 /* ContentView.swift */; };
 		85B126412A29224C00DC74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126402A29224C00DC74F9 /* Assets.xcassets */; };
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
+		85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */; };
+		85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264C2A29234E00DC74F9 /* StatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85B126392A29224700DC74F9 /* TriviaLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLeapApp.swift; sourceTree = "<group>"; };
-		85B1263E2A29224700DC74F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B126402A29224C00DC74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B126432A29224C00DC74F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
+		85B1264C2A29234E00DC74F9 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */,
-				85B1263E2A29224700DC74F9 /* ContentView.swift */,
+				85B1264E2A2925FF00DC74F9 /* Views */,
 				85B126402A29224C00DC74F9 /* Assets.xcassets */,
 				85B126422A29224C00DC74F9 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				85B126432A29224C00DC74F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85B1264E2A2925FF00DC74F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */,
+				85B1264C2A29234E00DC74F9 /* StatsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B1263F2A29224700DC74F9 /* ContentView.swift in Sources */,
+				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */,
+				85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
