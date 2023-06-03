@@ -9,10 +9,31 @@ import SwiftUI
 
 struct StatsView: View {
     var body: some View {
-        NavigationView{
-           
-        }
-        .navigationTitle("Statistics")
+            NavigationView{
+                VStack{
+               Image("History")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250, height:100)
+                    Text("History")
+                        .font(.title)
+                        .bold()
+                        
+                    
+                    Divider()
+                    
+                    Image("Mythology")
+                        .resizable()
+                        .scaledToFit()
+                    Text("Mythology")
+                        .font(.title)
+                        .bold()
+                    
+                }
+                .navigationTitle("Statistics")
+            }
+            
+     
     }
 }
 

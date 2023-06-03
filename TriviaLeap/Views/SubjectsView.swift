@@ -14,10 +14,12 @@ struct SubjectsView: View {
            Image("History")
                     .resizable()
                     .scaledToFit()
+//                    .frame(width: 250, height:100)
                 Text("History")
                     .font(.title)
                     .bold()
                     
+                
                 Divider()
                 
                 Image("Mythology")
@@ -28,9 +30,9 @@ struct SubjectsView: View {
                     .bold()
                 
             }
-            
+            .navigationTitle("Subjects")
         }
-        .navigationTitle("Subjects")
+       
     }
 }
 
