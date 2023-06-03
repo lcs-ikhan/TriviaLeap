@@ -12,6 +12,7 @@
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
 		85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */; };
 		85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264C2A29234E00DC74F9 /* StatsView.swift */; };
+		85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126502A2BD7E200DC74F9 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		85B126432A29224C00DC74F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		85B1264C2A29234E00DC74F9 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		85B126502A2BD7E200DC74F9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,17 @@
 			children = (
 				85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */,
 				85B1264C2A29234E00DC74F9 /* StatsView.swift */,
+				85B1264F2A2BD7A500DC74F9 /* Second Views */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		85B1264F2A2BD7A500DC74F9 /* Second Views */ = {
+			isa = PBXGroup;
+			children = (
+				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
+			);
+			path = "Second Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
+				85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */,
 				85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */,
 				85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */,
 			);

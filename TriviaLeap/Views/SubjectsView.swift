@@ -10,27 +10,32 @@ import SwiftUI
 struct SubjectsView: View {
     var body: some View {
         NavigationView{
-            VStack{
-           Image("History")
-                    .resizable()
-                    .scaledToFit()
-//                    .frame(width: 250, height:100)
-                Text("History")
-                    .font(.title)
-                    .bold()
+            ScrollView{
+                VStack{
+                    NavigationLink(destination: HistoryView()){
+                        Image("History")
+                            .resizable()
+                            .scaledToFit()
+                    }
                     
-                
-                Divider()
-                
-                Image("Mythology")
-                    .resizable()
-                    .scaledToFit()
-                Text("Mythology")
-                    .font(.title)
-                    .bold()
-                
+                    Text("History")
+                        .font(.title)
+                        .bold()
+                    
+                    
+                    Divider()
+                    
+                    Image("Mythology")
+                        .resizable()
+                        .scaledToFit()
+                    Text("Mythology")
+                        .font(.title)
+                        .bold()
+                    
+                }
+                .navigationTitle("Subjects")
             }
-            .navigationTitle("Subjects")
+            
         }
        
     }
