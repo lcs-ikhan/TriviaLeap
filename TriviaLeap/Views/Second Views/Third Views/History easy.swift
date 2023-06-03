@@ -10,30 +10,46 @@ import SwiftUI
 struct History_easy: View {
     var body: some View {
         NavigationView{
-            VStack(spacing: 20){
+            VStack(spacing: 50){
                 Text("Easy")
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.trailing)
-                    .border(Color.green)
                 
-                Text("Who won the balondor in 2016?")
+                Text("The Spitfire originated from a racing plane.")
                     .font(.title)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
             
+            Spacer()
                 
                 HStack(spacing: 75){
                     
+                    Button("True") {}
+                        .tint(.green)
+                        .buttonStyle(.borderedProminent)
                     
-                    Text("true")
-                        .border(Color.green)
-                    
-                    Text("false")
+                    Button("False") {}
+                        .tint(.red)
+                        .buttonStyle(.borderedProminent)
                     
                 }
                 
+                Spacer()
+                
+                HStack{
+                    Image(systemName: "checkmark.circle")
+                        .foregroundColor(.green)
+                    
+                    Text("That is correct!")
+                        .font(.title)
+                }
+              
+                Button("Next question") {}
+                    .buttonStyle(.bordered)
+                
             }
+            .padding()
             
             .navigationTitle("History")
             
