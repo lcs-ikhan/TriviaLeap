@@ -13,6 +13,7 @@
 		85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */; };
 		85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264C2A29234E00DC74F9 /* StatsView.swift */; };
 		85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126502A2BD7E200DC74F9 /* HistoryView.swift */; };
+		85B126542A2BD95400DC74F9 /* History easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126532A2BD95400DC74F9 /* History easy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		85B1264C2A29234E00DC74F9 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		85B126502A2BD7E200DC74F9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		85B126532A2BD95400DC74F9 /* History easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History easy.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,17 @@
 			isa = PBXGroup;
 			children = (
 				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
+				85B126522A2BD93F00DC74F9 /* Third Views */,
 			);
 			path = "Second Views";
+			sourceTree = "<group>";
+		};
+		85B126522A2BD93F00DC74F9 /* Third Views */ = {
+			isa = PBXGroup;
+			children = (
+				85B126532A2BD95400DC74F9 /* History easy.swift */,
+			);
+			path = "Third Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B126542A2BD95400DC74F9 /* History easy.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */,
 				85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */,
