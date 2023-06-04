@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct History_easy: View {
+    // MARK: Stored properties
     
+    @State var retrievedTrivia: [TriviaResponse] = []
     // The current history question to display
     @State var currentHistory = exampleHistory
     
