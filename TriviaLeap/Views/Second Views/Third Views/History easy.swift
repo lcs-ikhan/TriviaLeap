@@ -10,54 +10,84 @@ import SwiftUI
 struct History_easy: View {
     // MARK: Stored properties
     
-    @State var retrievedTrivia: [TriviaResponse] = []
     // The current history question to display
-    @State var currentHistory = exampleHistory
+    @State var questions: [Trivia] = []
     
     var body: some View {
         NavigationView{
-            VStack(spacing: 50){
-                Text(currentHistory.difficulty)
-                    .font(.largeTitle)
-                    .bold()
-                    .multilineTextAlignment(.trailing)
-                
-                Text(currentHistory.question)
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
             
-            Spacer()
-                
-                HStack(spacing: 75){
+            if questions.count > 0 {
+
+                VStack(spacing: 50){
                     
-                    Button("True") {}
-                        .tint(.green)
-                        .buttonStyle(.borderedProminent)
+                    Text(questions.first!.difficulty)
+                        .font(.largeTitle)
+                        .bold()
+                        .multilineTextAlignment(.trailing)
                     
-                    Button("False") {}
-                        .tint(.red)
-                        .buttonStyle(.borderedProminent)
-                    
-                }
+    //                Text(currentHistory.question)
+    //                    .font(.title)
+    //                    .fontWeight(.semibold)
+    //                    .multilineTextAlignment(.center)
                 
                 Spacer()
-                
-                HStack{
-                    Image(systemName: "checkmark.circle")
-                        .foregroundColor(.green)
                     
-                    Text("That is correct!")
-                        .font(.title)
-                }
-              
-                Button("Next question") {}
+                    HStack(spacing: 75){
+                        
+                        Button( action: {
+                            
+                        }, label: {
+                            Text("True")
+                        })
+                        .tint(.green)
+                        .buttonStyle(.borderedProminent)
+                        
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("False")
+                        })
+                        .tint(.red)
+                        .buttonStyle(.borderedProminent)
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    HStack{
+                        Image(systemName: "checkmark.circle")
+                            .foregroundColor(.green)
+                        
+                        Text("That is correct!")
+                            .font(.title)
+                    }
+                  
+                    Button(action: {
+//
+//                        Task {
+//                            // Get the next trivia question
+//                            withAnimation{
+//                                currentHistory = []
+//                            }
+//                            currentHistory = await NetworkService.fetch()
+//                        }
+//
+                    }, label: {
+                        Text("Next question")
+                    })
                     .buttonStyle(.bordered)
+                    
+                    
+                }
+                .padding()
                 
+                .navigationTitle("History")
+    //            .navigationTitle(currentHistory.category)
+
+            } else {
+                Text("Something went wrong")
             }
-            .padding()
             
-            .navigationTitle(currentHistory.category)
             
 
         }
