@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct History_easy: View {
+    
+    // The current history question to display
+    @State var currentHistory = exampleHistory
+    
     var body: some View {
         NavigationView{
             VStack(spacing: 50){
-                Text("Easy")
+                Text(currentHistory.difficulty)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.trailing)
                 
-                Text("The Spitfire originated from a racing plane.")
+                Text(currentHistory.question)
                     .font(.title)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
@@ -51,7 +55,7 @@ struct History_easy: View {
             }
             .padding()
             
-            .navigationTitle("History")
+            .navigationTitle(currentHistory.category)
             
 
         }

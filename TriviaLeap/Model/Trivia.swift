@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct History {
-    
+struct TriviaResponse: Codable {
+    let results: Trivia
+}
+
+struct Trivia: Codable {
     let category: String
     let type: String
     let difficulty: String
@@ -17,4 +20,4 @@ struct History {
     let incorrect_answers: Bool
 }
 
-let exampleHistory = History(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: true, incorrect_answers: false)
+let exampleHistory = Trivia(category: "History", type: "boolean", difficulty: "Easy", question: "The Spitfire originated from a racing plane.", correct_answer: true, incorrect_answers: false)
