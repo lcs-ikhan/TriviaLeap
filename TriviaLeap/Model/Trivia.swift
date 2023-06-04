@@ -8,7 +8,7 @@
 import Foundation
 
 struct TriviaResponse: Codable {
-    let results: Trivia
+    let results: [Trivia]
 }
 
 struct Trivia: Codable {
