@@ -24,14 +24,15 @@ struct HistoryEasy: View {
             
             VStack(spacing: 50){
                 
-                Text(questions.last!.difficulty)
+                Text(questions.first!.difficulty)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.trailing)
                 
-                Text(questions.last!.question)
+                Text(questions.first!.question)
                     .font(.title)
                     .fontWeight(.semibold)
+                    .minimumScaleFactor(0.25)
                     .multilineTextAlignment(.center)
                 
                 Spacer()
