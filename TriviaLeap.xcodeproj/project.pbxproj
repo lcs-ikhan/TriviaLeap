@@ -13,7 +13,7 @@
 		85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */; };
 		85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1264C2A29234E00DC74F9 /* StatsView.swift */; };
 		85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126502A2BD7E200DC74F9 /* HistoryView.swift */; };
-		85B126542A2BD95400DC74F9 /* History easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126532A2BD95400DC74F9 /* History easy.swift */; };
+		85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B126532A2BD95400DC74F9 /* HistoryEasy.swift */; };
 		85B1265B2A2BFD7D00DC74F9 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1265A2A2BFD7D00DC74F9 /* Trivia.swift */; };
 		85B1265E2A2D06FD00DC74F9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1265D2A2D06FC00DC74F9 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,7 @@
 		85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		85B1264C2A29234E00DC74F9 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		85B126502A2BD7E200DC74F9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		85B126532A2BD95400DC74F9 /* History easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History easy.swift"; sourceTree = "<group>"; };
+		85B126532A2BD95400DC74F9 /* HistoryEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEasy.swift; sourceTree = "<group>"; };
 		85B1265A2A2BFD7D00DC74F9 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		85B1265D2A2D06FC00DC74F9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +101,7 @@
 		85B126522A2BD93F00DC74F9 /* Third Views */ = {
 			isa = PBXGroup;
 			children = (
-				85B126532A2BD95400DC74F9 /* History easy.swift */,
+				85B126532A2BD95400DC74F9 /* HistoryEasy.swift */,
 			);
 			path = "Third Views";
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B126542A2BD95400DC74F9 /* History easy.swift in Sources */,
+				85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */,
 				85B1265E2A2D06FD00DC74F9 /* NetworkService.swift in Sources */,

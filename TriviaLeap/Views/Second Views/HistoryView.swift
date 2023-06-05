@@ -11,7 +11,9 @@ struct HistoryView: View {
     var body: some View {
         NavigationView{
             List{
-            Text("Easy")
+                NavigationLink(destination: HistoryEasy()){
+                    Text("Easy")
+                }
                 
             Text("Medium")
                 
