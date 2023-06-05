@@ -9,8 +9,8 @@ import SwiftUI
 
 struct HistoryView: View {
     var body: some View {
-        NavigationView{
-            List{
+       
+        List {
                 NavigationLink(destination: HistoryEasy()){
                     Text("Easy")
                 }
@@ -18,8 +18,6 @@ struct HistoryView: View {
             Text("Medium")
                 
             Text("Hard")
-            }
-            .navigationTitle("History")
         }
     }
 }
