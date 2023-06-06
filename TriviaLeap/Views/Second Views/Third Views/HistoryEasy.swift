@@ -17,6 +17,8 @@ struct HistoryEasy: View {
     
     @State var answerCorrect = false
     
+    @State var answered = false
+    
     var body: some View {
         
         //
@@ -44,6 +46,7 @@ struct HistoryEasy: View {
                         Button( action: {
                             
                             answerCorrect = true
+                            answered = true
                             
                         }, label: {
                             Text("True")
@@ -54,6 +57,7 @@ struct HistoryEasy: View {
                         Button(action: {
                             
                             answerCorrect = false
+                            answered = true
                             
                         }, label: {
                             Text("False")
@@ -66,6 +70,7 @@ struct HistoryEasy: View {
                         Button( action: {
                             
                             answerCorrect = false
+                            answered = true
                             
                         }, label: {
                             Text("True")
@@ -76,6 +81,7 @@ struct HistoryEasy: View {
                         Button(action: {
                             
                             answerCorrect = true
+                            answered = true
                             
                         }, label: {
                             Text("False")
@@ -102,7 +108,7 @@ struct HistoryEasy: View {
                 //            }
                 
                 
-                if answerCorrect == true {
+                if answerCorrect == true && answered == true {
                     HStack{
                                    Image(systemName: "checkmark.circle")
                                        .foregroundColor(.green)
@@ -110,7 +116,7 @@ struct HistoryEasy: View {
                                    Text("That is correct!")
                                        .font(.title)
                                }
-                } else {
+                } else if answerCorrect == false && answered == true {
                     HStack{
                                    Image(systemName: "x.circle")
                                        .foregroundColor(.red)
@@ -129,6 +135,8 @@ struct HistoryEasy: View {
                         }
                         questions = await NetworkService.fetch()
                     }
+                    
+                    answered = false
                     //
                 }, label: {
                     Text("Next question")
