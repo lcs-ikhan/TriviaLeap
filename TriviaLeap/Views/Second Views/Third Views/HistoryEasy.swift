@@ -13,9 +13,9 @@ struct HistoryEasy: View {
     
     
     // The current history question to display
-    @State var questions: [Trivia] = [
-        Trivia(category: "", type: "", difficulty: "", question: "", correct_answer: "", incorrect_answers: [""])
-    ]
+    @State var questions: [Trivia] = [exampleHistory]
+    
+    @State var answerCorrect = false
     
     var body: some View {
         
@@ -39,35 +39,71 @@ struct HistoryEasy: View {
             
             HStack(spacing: 75){
                 
-                Button( action: {
+                if questions.first!.correct_answer == true {
                     
-                    
-                    
-                }, label: {
+                    Button( action: {
+                        
+                        answerCorrect = true
+                        
+                    }, label: {
                     Text("True")
                 })
                 .tint(.green)
                 .buttonStyle(.borderedProminent)
-                
-                Button(action: {
                     
-                }, label: {
-                    Text("False")
+                    Button(action: {
+                        
+                        answerCorrect = false
+                        
+                    }, label: {
+                        Text("False")
+                    })
+                    .tint(.red)
+                    .buttonStyle(.borderedProminent)
+                    
+                } else {
+                    
+                    Button( action: {
+                        
+                        answerCorrect = false
+                        
+                    }, label: {
+                    Text("True")
                 })
-                .tint(.red)
+                .tint(.green)
                 .buttonStyle(.borderedProminent)
+                    
+                    Button(action: {
+                        
+                        answerCorrect = true
+                        
+                    }, label: {
+                        Text("False")
+                    })
+                    .tint(.red)
+                    .buttonStyle(.borderedProminent)
+                    
+                    
+                }
+                
+                if answerCorrect == true {
+                    Text("Correct!")
+                } else {
+                    Text("Incorrect!")
+                }
+           
                 
             }
             
             Spacer()
             
-            HStack{
-                Image(systemName: "checkmark.circle")
-                    .foregroundColor(.green)
-                
-                Text("That is correct!")
-                    .font(.title)
-            }
+//            HStack{
+//                Image(systemName: "checkmark.circle")
+//                    .foregroundColor(.green)
+//
+//                Text("That is correct!")
+//                    .font(.title)
+//            }
             
             Button(action: {
                 
@@ -112,3 +148,13 @@ struct HistoryEasy_Previews: PreviewProvider {
         HistoryEasy()
     }
 }
+
+
+//HStack{
+//    Image(systemName: "x.circle")
+//        .foregroundColor(.green)
+//
+//    Text("That is incorrect!")
+//        .font(.title)
+//
+//}
