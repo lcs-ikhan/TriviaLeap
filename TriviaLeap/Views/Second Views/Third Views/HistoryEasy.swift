@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryEasy: View {
     // MARK: Stored properties
     
-    
+    @State var buttonOpacity = 0.0
     
     // The current history question to display
     @State var questions: [Trivia] = []
@@ -53,6 +53,7 @@ struct HistoryEasy: View {
                         })
                         .tint(.green)
                         .buttonStyle(.borderedProminent)
+                        .disabled(answered)
                         
                         Button(action: {
                             
@@ -64,6 +65,7 @@ struct HistoryEasy: View {
                         })
                         .tint(.red)
                         .buttonStyle(.borderedProminent)
+                        .disabled(answered)
                         
                     } else {
                         
@@ -77,6 +79,8 @@ struct HistoryEasy: View {
                         })
                         .tint(.green)
                         .buttonStyle(.borderedProminent)
+                        .disabled(answered)
+
                         
                         Button(action: {
                             
@@ -88,6 +92,7 @@ struct HistoryEasy: View {
                         })
                         .tint(.red)
                         .buttonStyle(.borderedProminent)
+                        .disabled(answered)
                         
                         
                     }
@@ -115,7 +120,10 @@ struct HistoryEasy: View {
                    
                                    Text("That is correct!")
                                        .font(.title)
+                        
+                        
                                }
+                    let buttonOpacity = 1.0
                 } else if answerCorrect == false && answered == true {
                     HStack{
                                    Image(systemName: "x.circle")
@@ -124,10 +132,11 @@ struct HistoryEasy: View {
                                    Text("That is Incorrect!")
                                        .font(.title)
                                }
+                   let buttonOpacity = 1.0
                 }
                 
                 Button(action: {
-                    
+                    buttonOpacity = 0.0
                     Task {
                         // Get the next trivia question
                         withAnimation{
@@ -137,10 +146,10 @@ struct HistoryEasy: View {
                     }
                     
                     answered = false
-                    //
                 }, label: {
                     Text("Next question")
                 })
+                .opacity(answered == false ? 0.0 : 1.0)
                 .buttonStyle(.bordered)
                 
                 
