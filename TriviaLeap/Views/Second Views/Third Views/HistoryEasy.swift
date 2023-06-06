@@ -123,7 +123,6 @@ struct HistoryEasy: View {
                         
                         
                                }
-                    let buttonOpacity = 1.0
                 } else if answerCorrect == false && answered == true {
                     HStack{
                                    Image(systemName: "x.circle")
@@ -132,7 +131,6 @@ struct HistoryEasy: View {
                                    Text("That is Incorrect!")
                                        .font(.title)
                                }
-                   let buttonOpacity = 1.0
                 }
                 
                 Button(action: {
