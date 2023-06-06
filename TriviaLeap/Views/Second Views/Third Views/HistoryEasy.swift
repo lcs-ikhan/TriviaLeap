@@ -86,11 +86,7 @@ struct HistoryEasy: View {
                         
                     }
                     
-                    if answerCorrect == true {
-                        Text("Correct!")
-                    } else {
-                        Text("Incorrect!")
-                    }
+                    
                     
                     
                 }
@@ -104,6 +100,25 @@ struct HistoryEasy: View {
                 //                Text("That is correct!")
                 //                    .font(.title)
                 //            }
+                
+                
+                if answerCorrect == true {
+                    HStack{
+                                   Image(systemName: "checkmark.circle")
+                                       .foregroundColor(.green)
+                   
+                                   Text("That is correct!")
+                                       .font(.title)
+                               }
+                } else {
+                    HStack{
+                                   Image(systemName: "x.circle")
+                                       .foregroundColor(.red)
+                   
+                                   Text("That is Incorrect!")
+                                       .font(.title)
+                               }
+                }
                 
                 Button(action: {
                     
