@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */; };
 		855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */; };
+		855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */; };
 		85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */; };
 		85B126412A29224C00DC74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126402A29224C00DC74F9 /* Assets.xcassets */; };
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceHMedium.swift; sourceTree = "<group>"; };
 		855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMedium.swift; sourceTree = "<group>"; };
+		855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSerciceHHard.swift; sourceTree = "<group>"; };
 		85B126392A29224700DC74F9 /* TriviaLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLeapApp.swift; sourceTree = "<group>"; };
 		85B126402A29224C00DC74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			children = (
 				85B1265D2A2D06FC00DC74F9 /* NetworkServiceHEasy.swift */,
 				855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */,
+				855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */,
 				85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
+				855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */,
 				855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */,
 				85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */,
 				85B1265E2A2D06FD00DC74F9 /* NetworkServiceHEasy.swift in Sources */,
