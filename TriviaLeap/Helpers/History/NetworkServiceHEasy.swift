@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NetworkService {
+struct NetworkServiceHEasy {
     
     // This loads a list of songs that match the provided search term from the endpoint.
     //

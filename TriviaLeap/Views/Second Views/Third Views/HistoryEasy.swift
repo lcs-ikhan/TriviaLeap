@@ -104,15 +104,6 @@ struct HistoryEasy: View {
                 
                 Spacer()
                 
-                //            HStack{
-                //                Image(systemName: "checkmark.circle")
-                //                    .foregroundColor(.green)
-                //
-                //                Text("That is correct!")
-                //                    .font(.title)
-                //            }
-                
-                
                 if answerCorrect == true && answered == true {
                     HStack{
                                    Image(systemName: "checkmark.circle")
@@ -140,7 +131,7 @@ struct HistoryEasy: View {
                         withAnimation{
                             questions = []
                         }
-                        questions = await NetworkService.fetch()
+                        questions = await NetworkServiceHEasy.fetch()
                     }
                     
                     answered = false
@@ -155,9 +146,7 @@ struct HistoryEasy: View {
             .padding()
             
         }
-        
-        //                .navigationTitle(questions!.category)
-        //            .navigationTitle(currentHistory.category)
+
         
     else {
         
@@ -165,21 +154,15 @@ struct HistoryEasy: View {
         
             .task {
                         if questions.count == 0 {
-                            questions = await NetworkService.fetch()
+                            questions = await NetworkServiceHEasy.fetch()
                         }
             
                     }
     }
-    //
     
     
 }
-//        .task {
-//            if questions.count == 0 {
-//                questions = await NetworkService.fetch()
-//            }
-//
-//        }
+
 }
 
 
@@ -191,11 +174,3 @@ struct HistoryEasy_Previews: PreviewProvider {
 }
 
 
-//HStack{
-//    Image(systemName: "x.circle")
-//        .foregroundColor(.green)
-//
-//    Text("That is incorrect!")
-//        .font(.title)
-//
-//}
