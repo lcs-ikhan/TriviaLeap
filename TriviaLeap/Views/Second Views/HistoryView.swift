@@ -9,20 +9,21 @@ import SwiftUI
 
 struct HistoryView: View {
     var body: some View {
-       
+        
         List {
-                NavigationLink(destination: HistoryEasy()){
-                    Text("Easy")
-                }
+            NavigationLink(destination: HistoryEasy()){
+                Text("Easy")
+            }
             NavigationLink(destination: HistoryMedium()){
                 Text("Medium")
             }
             
-            Text("Hard")
+            NavigationLink(destination: HistoryHard()){
+                Text("Hard")
+            }
         }
     }
 }
-
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView()
