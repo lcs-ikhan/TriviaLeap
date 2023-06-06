@@ -13,7 +13,7 @@ struct HistoryEasy: View {
     
     
     // The current history question to display
-    @State var questions: [Trivia] = [exampleHistory]
+    @State var questions: [Trivia] = []
     
     @State var answerCorrect = false
     
@@ -125,7 +125,7 @@ struct HistoryEasy: View {
                     Task {
                         // Get the next trivia question
                         withAnimation{
-                            questions = [exampleHistory]
+                            questions = []
                         }
                         questions = await NetworkService.fetch()
                     }
