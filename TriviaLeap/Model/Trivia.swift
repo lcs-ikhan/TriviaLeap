@@ -16,8 +16,8 @@ struct Trivia: Codable {
     let type: String
     let difficulty: String
     let question: String
-    let correct_answer: Bool
-    let incorrect_answers: [Bool]
+    let correct_answer: String
+    let incorrect_answers: [String]
 }
 
-let exampleHistory = Trivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: true, incorrect_answers: [false])
+let exampleHistory = Trivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: "True", incorrect_answers: ["False"])

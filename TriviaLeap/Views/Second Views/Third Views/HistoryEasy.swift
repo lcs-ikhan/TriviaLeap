@@ -20,119 +20,130 @@ struct HistoryEasy: View {
     var body: some View {
         
         //
-        //            if questions.count > 0 {
-        
-        VStack(spacing: 50){
+        if questions.count > 0 {
             
-            Text(questions.first!.difficulty)
-                .font(.largeTitle)
-                .bold()
-                .multilineTextAlignment(.trailing)
-            
-            Text(questions.first!.question)
-                .font(.title)
-                .fontWeight(.semibold)
-                .minimumScaleFactor(0.25)
-                .multilineTextAlignment(.center)
-            
-            Spacer()
-            
-            HStack(spacing: 75){
+            VStack(spacing: 50){
                 
-                if questions.first!.correct_answer == true {
+                Text(questions.last!.difficulty)
+                    .font(.largeTitle)
+                    .bold()
+                    .multilineTextAlignment(.trailing)
+                
+                Text(questions.last!.question)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .minimumScaleFactor(0.25)
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+                
+                HStack(spacing: 75){
                     
-                    Button( action: {
+                    if questions.first!.correct_answer == "True" {
                         
-                        answerCorrect = true
+                        Button( action: {
+                            
+                            answerCorrect = true
+                            
+                        }, label: {
+                            Text("True")
+                        })
+                        .tint(.green)
+                        .buttonStyle(.borderedProminent)
                         
-                    }, label: {
-                    Text("True")
-                })
-                .tint(.green)
-                .buttonStyle(.borderedProminent)
+                        Button(action: {
+                            
+                            answerCorrect = false
+                            
+                        }, label: {
+                            Text("False")
+                        })
+                        .tint(.red)
+                        .buttonStyle(.borderedProminent)
+                        
+                    } else {
+                        
+                        Button( action: {
+                            
+                            answerCorrect = false
+                            
+                        }, label: {
+                            Text("True")
+                        })
+                        .tint(.green)
+                        .buttonStyle(.borderedProminent)
+                        
+                        Button(action: {
+                            
+                            answerCorrect = true
+                            
+                        }, label: {
+                            Text("False")
+                        })
+                        .tint(.red)
+                        .buttonStyle(.borderedProminent)
+                        
+                        
+                    }
                     
-                    Button(action: {
-                        
-                        answerCorrect = false
-                        
-                    }, label: {
-                        Text("False")
-                    })
-                    .tint(.red)
-                    .buttonStyle(.borderedProminent)
-                    
-                } else {
-                    
-                    Button( action: {
-                        
-                        answerCorrect = false
-                        
-                    }, label: {
-                    Text("True")
-                })
-                .tint(.green)
-                .buttonStyle(.borderedProminent)
-                    
-                    Button(action: {
-                        
-                        answerCorrect = true
-                        
-                    }, label: {
-                        Text("False")
-                    })
-                    .tint(.red)
-                    .buttonStyle(.borderedProminent)
+                    if answerCorrect == true {
+                        Text("Correct!")
+                    } else {
+                        Text("Incorrect!")
+                    }
                     
                     
                 }
                 
-                if answerCorrect == true {
-                    Text("Correct!")
-                } else {
-                    Text("Incorrect!")
-                }
-           
+                Spacer()
+                
+                //            HStack{
+                //                Image(systemName: "checkmark.circle")
+                //                    .foregroundColor(.green)
+                //
+                //                Text("That is correct!")
+                //                    .font(.title)
+                //            }
+                
+                Button(action: {
+                    
+                    Task {
+                        // Get the next trivia question
+                        withAnimation{
+                            questions = [exampleHistory]
+                        }
+                        questions = await NetworkService.fetch()
+                    }
+                    //
+                }, label: {
+                    Text("Next question")
+                })
+                .buttonStyle(.bordered)
+                
                 
             }
-            
-            Spacer()
-            
-//            HStack{
-//                Image(systemName: "checkmark.circle")
-//                    .foregroundColor(.green)
-//
-//                Text("That is correct!")
-//                    .font(.title)
-//            }
-            
-            Button(action: {
-                
-                Task {
-                    // Get the next trivia question
-                    withAnimation{
-                        questions = [exampleHistory]
-                    }
-                    questions = await NetworkService.fetch()
-                }
-                //
-            }, label: {
-                Text("Next question")
-            })
-            .buttonStyle(.bordered)
-            
+            .padding()
             
         }
-        .padding()
         
         //                .navigationTitle(questions!.category)
         //            .navigationTitle(currentHistory.category)
         
-        //            } else {
-        //                Text("Something went wrong")
-        //            }
-        //
+    else {
         
+        Text("Waiting for Question")
+        
+            .task {
+                        if questions.count == 0 {
+                            questions = await NetworkService.fetch()
+                        }
+            
+                    }
     }
+    //
+    
+    
+}
 //        .task {
 //            if questions.count == 0 {
 //                questions = await NetworkService.fetch()
