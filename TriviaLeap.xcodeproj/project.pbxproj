@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */; };
+		855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */; };
 		85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */; };
 		85B126412A29224C00DC74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126402A29224C00DC74F9 /* Assets.xcassets */; };
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceHMedium.swift; sourceTree = "<group>"; };
+		855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMedium.swift; sourceTree = "<group>"; };
 		85B126392A29224700DC74F9 /* TriviaLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLeapApp.swift; sourceTree = "<group>"; };
 		85B126402A29224C00DC74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				85B126532A2BD95400DC74F9 /* HistoryEasy.swift */,
+				855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */,
 			);
 			path = "Third Views";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */,
 				85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */,

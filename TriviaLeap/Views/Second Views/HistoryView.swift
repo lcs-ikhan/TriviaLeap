@@ -14,9 +14,10 @@ struct HistoryView: View {
                 NavigationLink(destination: HistoryEasy()){
                     Text("Easy")
                 }
-                
-            Text("Medium")
-                
+            NavigationLink(destination: HistoryMedium()){
+                Text("Medium")
+            }
+            
             Text("Hard")
         }
     }
