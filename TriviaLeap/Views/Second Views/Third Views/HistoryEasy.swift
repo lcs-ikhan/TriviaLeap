@@ -21,7 +21,6 @@ struct HistoryEasy: View {
     
     var body: some View {
         
-        //
         if questions.count > 0 {
             
             VStack(spacing: 50){
