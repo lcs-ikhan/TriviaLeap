@@ -23,7 +23,7 @@ struct TriviaLeapApp: App {
                         Label("Wisdom", systemImage: "chart.bar.fill")
                     }
                 
-                PreviousQuestions()
+                SavedView()
                     .tabItem {
                         Label("Previous Questions", systemImage: "chart.bar.fill")
                     }

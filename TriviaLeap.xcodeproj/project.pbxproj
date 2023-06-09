@@ -115,6 +115,7 @@
 				85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */,
 				85B1264C2A29234E00DC74F9 /* StatsView.swift */,
 				8587422A2A32904200505C96 /* PreviousQuestions.swift */,
+				8587423E2A335A5200505C96 /* SavedView.swift */,
 				85B1264F2A2BD7A500DC74F9 /* Second Views */,
 			);
 			path = Views;
@@ -123,7 +124,6 @@
 		85B1264F2A2BD7A500DC74F9 /* Second Views */ = {
 			isa = PBXGroup;
 			children = (
-				8587423E2A335A5200505C96 /* SavedView.swift */,
 				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
 				85B126522A2BD93F00DC74F9 /* Third Views */,
 			);
