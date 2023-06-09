@@ -19,15 +19,18 @@ struct SavedView: View {
     
     
     var body: some View {
-        List(savedQuestions.results) { exampleSave in
-            VStack(alignment: .leading) {
-                Text(exampleSave.category)
-                    .bold()
-                Text(exampleSave.difficulty)
-                Text(exampleSave.question)
-                Text(exampleSave.correct_answer)
+        NavigationView{
+            List(savedQuestions.results) { exampleSave in
+                VStack(alignment: .leading) {
+                    Text(exampleSave.category)
+                        .bold()
+                    Text(exampleSave.difficulty)
+                    Text(exampleSave.question)
+                    Text(exampleSave.correct_answer)
+                }
             }
         }
+        .navigationTitle("Previous Questions")
     }
 }
 struct SavedView_Previews: PreviewProvider {
