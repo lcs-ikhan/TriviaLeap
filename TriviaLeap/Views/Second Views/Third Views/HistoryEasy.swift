@@ -138,18 +138,18 @@ struct HistoryEasy: View {
                 }
                 
                 Button(action: {
+                    let question = questions[0]
                     Task{
                         // Write to database
 //                        if exampleSave != exampleSave{
                             try await db!.transaction { core in
-                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers, id) VALUES (?,?,?,?,?,?,?)",
-                                               exampleSave.category,
-                                               exampleSave.type,
-                                               exampleSave.difficulty,
-                                               exampleSave.question,
-                                               exampleSave.correct_answer,
-                                               exampleSave.incorrect_answers,
-                                               exampleSave.id)
+                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers) VALUES (?,?,?,?,?,?)",
+                                               question.category,
+                                               question.type,
+                                               question.difficulty,
+                                               question.question,
+                                               question.correct_answer,
+                                               question.incorrect_answers[0])
                             }
 //                        }
                     }

@@ -19,14 +19,13 @@ struct SavedView: View {
     
     
     var body: some View {
-        NavigationView{
-            List(savedQuestions.results) { exampleSave in
+        NavigationView{            List(savedQuestions.results) { question in
                 VStack(alignment: .leading) {
-                    Text(exampleSave.category)
+                    Text(question.category)
                         .bold()
-                    Text(exampleSave.difficulty)
-                    Text(exampleSave.question)
-                    Text(exampleSave.correct_answer)
+                    Text(question.difficulty)
+                    Text(question.question)
+                    Text(question.correct_answer)
                 }
             }
         }
