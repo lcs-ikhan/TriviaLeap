@@ -1,21 +1,18 @@
 //
-//  HistoryMedium.swift
-//  TriviaLeap
-//
-//  Created by Isaad Khan on 2023-06-06.
-//
-
-//
 //  History easy.swift
 //  TriviaLeap
 //
 //  Created by Isaad Khan on 2023-06-03.
 //
 
+import Blackbird
 import SwiftUI
 
 struct HistoryMedium: View {
     // MARK: Stored properties
+    
+    // Access the connection to the database (needed to add a new record)
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     
     @State var buttonOpacity = 0.0
     
@@ -26,9 +23,12 @@ struct HistoryMedium: View {
     
     @State var answered = false
     
+    @State var correctEasy = 0
+    
+    @State var questionsAnswered = 0
+    
     var body: some View {
         
-        //
         if questions.count > 0 {
             
             VStack(spacing: 50){
@@ -54,6 +54,8 @@ struct HistoryMedium: View {
                             
                             answerCorrect = true
                             answered = true
+                            questionsAnswered += 1
+                            
                             
                         }, label: {
                             Text("True")
@@ -66,6 +68,7 @@ struct HistoryMedium: View {
                             
                             answerCorrect = false
                             answered = true
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("False")
@@ -80,6 +83,7 @@ struct HistoryMedium: View {
                             
                             answerCorrect = false
                             answered = true
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("True")
@@ -93,6 +97,8 @@ struct HistoryMedium: View {
                             
                             answerCorrect = true
                             answered = true
+                            correctEasy += 1
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("False")
@@ -132,6 +138,21 @@ struct HistoryMedium: View {
                 }
                 
                 Button(action: {
+                    let question = questions[0]
+                    Task{
+                        // Write to database
+//                        if exampleSave != exampleSave{
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers) VALUES (?,?,?,?,?,?)",
+                                               question.category,
+                                               question.type,
+                                               question.difficulty,
+                                               question.question,
+                                               question.correct_answer,
+                                               question.incorrect_answers[0])
+                            }
+//                        }
+                    }
                     buttonOpacity = 0.0
                     Task {
                         // Get the next trivia question
@@ -140,6 +161,7 @@ struct HistoryMedium: View {
                         }
                         questions = await NetworkServiceHMedium.fetch()
                     }
+                
                     
                     answered = false
                 }, label: {
@@ -148,7 +170,16 @@ struct HistoryMedium: View {
                 .opacity(answered == false ? 0.0 : 1.0)
                 .buttonStyle(.bordered)
                 
-                
+//                Button(action: {
+//
+//                }, label: {
+//                    Text("Save question")
+//                })
+//                .disabled(buttonOpacity == 0.0 ? true : false)
+//                .tint(.green)
+//                .buttonStyle(.borderedProminent)
+//
+//
             }
             .padding()
             
@@ -177,6 +208,7 @@ struct HistoryMedium: View {
 struct HistoryMedium_Previews: PreviewProvider {
     static var previews: some View {
         HistoryMedium()
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
 
