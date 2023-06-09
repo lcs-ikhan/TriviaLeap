@@ -18,4 +18,4 @@ struct SavedTrivia: Codable, BlackbirdModel, Identifiable {
     @BlackbirdColumn var id: Int
 }
 
-let exampleSave = SavedTrivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: "True", incorrect_answers: "False", id: 3)
+let exampleSave = SavedTrivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: "True", incorrect_answers: "False", id: 1)

@@ -70,6 +70,13 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		858742402A33755A00505C96 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
 		85B126302A29224600DC74F9 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +157,9 @@
 		85B1265C2A2D06C700DC74F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				855AC07C2A2F9344005B2BEF /* History */,
+				858742402A33755A00505C96 /* Abstraction */,
 				8587423A2A33588C00505C96 /* AppDatbase.swift */,
+				855AC07C2A2F9344005B2BEF /* History */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

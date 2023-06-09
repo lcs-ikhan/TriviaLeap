@@ -11,7 +11,8 @@ struct HistoryView: View {
     var body: some View {
         
         List {
-            NavigationLink(destination: HistoryEasy()){
+            NavigationLink(destination: HistoryEasy()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)){
                 Text("Easy")
             }
             NavigationLink(destination: HistoryMedium()){

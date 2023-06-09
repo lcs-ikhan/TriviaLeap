@@ -138,18 +138,9 @@ struct HistoryEasy: View {
                 }
                 
                 Button(action: {
-                    
-                    buttonOpacity = 0.0
-                    Task {
-                        // Get the next trivia question
-                        withAnimation{
-                            questions = []
-                        }
-                        questions = await NetworkServiceHEasy.fetch()
-                    }
                     Task{
                         // Write to database
-                        if exampleSave != exampleSave{
+//                        if exampleSave != exampleSave{
                             try await db!.transaction { core in
                                 try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers, id) VALUES (?,?,?,?,?,?,?)",
                                                exampleSave.category,
@@ -160,8 +151,17 @@ struct HistoryEasy: View {
                                                exampleSave.incorrect_answers,
                                                exampleSave.id)
                             }
-                        }
+//                        }
                     }
+                    buttonOpacity = 0.0
+                    Task {
+                        // Get the next trivia question
+                        withAnimation{
+                            questions = []
+                        }
+                        questions = await NetworkServiceHEasy.fetch()
+                    }
+                
                     
                     answered = false
                 }, label: {
