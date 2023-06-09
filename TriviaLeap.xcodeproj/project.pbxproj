@@ -16,6 +16,7 @@
 		858742372A3357D700505C96 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 858742362A3357D700505C96 /* Blackbird */; };
 		858742392A33582900505C96 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 858742382A33582900505C96 /* db.sqlite */; };
 		8587423B2A33588C00505C96 /* AppDatbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587423A2A33588C00505C96 /* AppDatbase.swift */; };
+		8587423F2A335A5200505C96 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587423E2A335A5200505C96 /* SavedView.swift */; };
 		85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */; };
 		85B126412A29224C00DC74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126402A29224C00DC74F9 /* Assets.xcassets */; };
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		858742332A3355EC00505C96 /* SavedTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTrivia.swift; sourceTree = "<group>"; };
 		858742382A33582900505C96 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		8587423A2A33588C00505C96 /* AppDatbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatbase.swift; sourceTree = "<group>"; };
+		8587423E2A335A5200505C96 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		85B126392A29224700DC74F9 /* TriviaLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLeapApp.swift; sourceTree = "<group>"; };
 		85B126402A29224C00DC74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
 				85B126522A2BD93F00DC74F9 /* Third Views */,
+				8587423E2A335A5200505C96 /* SavedView.swift */,
 			);
 			path = "Second Views";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				8587423B2A33588C00505C96 /* AppDatbase.swift in Sources */,
 				85B1265B2A2BFD7D00DC74F9 /* Trivia.swift in Sources */,
 				85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */,
+				8587423F2A335A5200505C96 /* SavedView.swift in Sources */,
 				8587422B2A32904200505C96 /* PreviousQuestions.swift in Sources */,
 				858742342A3355EC00505C96 /* SavedTrivia.swift in Sources */,
 				855AC0842A2F9579005B2BEF /* HistoryHard.swift in Sources */,
