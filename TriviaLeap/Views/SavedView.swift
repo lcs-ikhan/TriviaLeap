@@ -19,22 +19,25 @@ struct SavedView: View {
     
     
     var body: some View {
-        NavigationView{            List(savedQuestions.results) { question in
-                VStack(alignment: .leading) {
-                    Text(question.category)
-                        .bold()
-                    Text(question.difficulty)
-                    Text(question.question)
-                    Text(question.correct_answer)
-                }
+        NavigationView{ List(savedQuestions.results) { question in
+            VStack(alignment: .leading) {
+                ListView(question: question)
+                //                Text(question.category)
+                //                    .bold()
+                //                Text(question.difficulty)
+                //                Text(question.question)
+                //                Text(question.correct_answer)
+                //            }
             }
         }
         .navigationTitle("Previous Questions")
+        }
     }
 }
-struct SavedView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedView()
-            .environment(\.blackbirdDatabase, AppDatabase.instance)
+    struct SavedView_Previews: PreviewProvider {
+        static var previews: some View {
+            SavedView()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
+        }
     }
-}
+
