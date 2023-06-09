@@ -16,6 +16,7 @@
 		858742392A33582900505C96 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 858742382A33582900505C96 /* db.sqlite */; };
 		8587423B2A33588C00505C96 /* AppDatbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587423A2A33588C00505C96 /* AppDatbase.swift */; };
 		8587423F2A335A5200505C96 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587423E2A335A5200505C96 /* SavedView.swift */; };
+		858742422A337F0600505C96 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858742412A337F0600505C96 /* ListView.swift */; };
 		85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */; };
 		85B126412A29224C00DC74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126402A29224C00DC74F9 /* Assets.xcassets */; };
 		85B126442A29224C00DC74F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B126432A29224C00DC74F9 /* Preview Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		858742382A33582900505C96 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		8587423A2A33588C00505C96 /* AppDatbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatbase.swift; sourceTree = "<group>"; };
 		8587423E2A335A5200505C96 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		858742412A337F0600505C96 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		85B126392A29224700DC74F9 /* TriviaLeap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaLeap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B1263C2A29224700DC74F9 /* TriviaLeapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLeapApp.swift; sourceTree = "<group>"; };
 		85B126402A29224C00DC74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		858742402A33755A00505C96 /* Abstraction */ = {
 			isa = PBXGroup;
 			children = (
+				858742412A337F0600505C96 /* ListView.swift */,
 			);
 			path = Abstraction;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */,
 				85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */,
+				858742422A337F0600505C96 /* ListView.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */,
 				855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */,
