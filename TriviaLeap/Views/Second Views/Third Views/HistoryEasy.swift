@@ -5,10 +5,14 @@
 //  Created by Isaad Khan on 2023-06-03.
 //
 
+import Blackbird
 import SwiftUI
 
 struct HistoryEasy: View {
     // MARK: Stored properties
+    
+    // Access the connection to the database (needed to add a new record)
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     
     @State var buttonOpacity = 0.0
     
@@ -51,6 +55,7 @@ struct HistoryEasy: View {
                             answerCorrect = true
                             answered = true
                             questionsAnswered += 1
+                            
                             
                         }, label: {
                             Text("True")
@@ -133,6 +138,7 @@ struct HistoryEasy: View {
                 }
                 
                 Button(action: {
+                    
                     buttonOpacity = 0.0
                     Task {
                         // Get the next trivia question
@@ -148,6 +154,25 @@ struct HistoryEasy: View {
                 })
                 .opacity(answered == false ? 0.0 : 1.0)
                 .buttonStyle(.bordered)
+                
+                Button(action: {
+                    Task{
+                        // Write to database
+                        if exampleSave != exampleSave{
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers) VALUES (?,?,?,?,?,?)",
+                                               exampleSave.category,
+                                               exampleSave.type,
+                                               exampleSave.difficulty,
+                                               exampleSave.question,
+                                               exampleSave.correct_answer,
+                                               exampleSave.incorrect_answers)
+                            }
+                        }
+                    }
+                }, label: {
+                    Text("Save question")
+                })
                 
                 
             }
@@ -178,6 +203,7 @@ struct HistoryEasy: View {
 struct HistoryEasy_Previews: PreviewProvider {
     static var previews: some View {
         HistoryEasy()
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
 
