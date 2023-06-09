@@ -1,20 +1,37 @@
+////
+////  SavedView.swift
+////  TriviaLeap
+////
+////  Created by Isaad Khan on 2023-06-09.
+////
 //
-//  SavedView.swift
-//  TriviaLeap
+//import Blackbird
+//import SwiftUI
 //
-//  Created by Isaad Khan on 2023-06-09.
+//struct SavedView: View {
 //
-
-import SwiftUI
-
-struct SavedView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct SavedView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedView()
-    }
-}
+//    // MARK: Stored properties
+//
+//    // The list of savedTrivia
+//    @BlackbirdLiveModels({ db in
+//        try await SavedTrivia.read(from: db)
+//    }) var savedQuestions
+//
+//
+//    var body: some View {
+//        List(savedQuestions.results) { exampleSave in
+//            VStack(alignment: .leading) {
+//                Text(exampleSave.category)
+//                    .bold()
+//                Text(exampleSave.difficulty)
+//                Text(exampleS)
+//            }
+//    }
+//}
+//
+//struct SavedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SavedView()
+//            .environment(\.blackbirdDatabase, AppDatabase.instance)
+//    }
+//}

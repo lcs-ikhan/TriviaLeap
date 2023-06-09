@@ -123,9 +123,9 @@
 		85B1264F2A2BD7A500DC74F9 /* Second Views */ = {
 			isa = PBXGroup;
 			children = (
+				8587423E2A335A5200505C96 /* SavedView.swift */,
 				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
 				85B126522A2BD93F00DC74F9 /* Third Views */,
-				8587423E2A335A5200505C96 /* SavedView.swift */,
 			);
 			path = "Second Views";
 			sourceTree = "<group>";

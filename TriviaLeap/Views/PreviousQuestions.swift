@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct PreviousQuestions: View {
+struct HistoryStats: View {
+    let questionsAnswered: Int
+    let correctEasy: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(correctEasy)/\(questionsAnswered)")
     }
 }
 
-struct PreviousQuestions_Previews: PreviewProvider {
-    static var previews: some View {
-        PreviousQuestions()
-    }
-}
+//struct GistoryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HistoryStats()
+//    }
+//}
