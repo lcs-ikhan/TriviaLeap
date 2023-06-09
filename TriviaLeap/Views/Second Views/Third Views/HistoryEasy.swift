@@ -19,6 +19,10 @@ struct HistoryEasy: View {
     
     @State var answered = false
     
+    @State var correctEasy = 0
+    
+    @State var questionsAnswered = 0
+    
     var body: some View {
         
         if questions.count > 0 {
@@ -46,6 +50,7 @@ struct HistoryEasy: View {
                             
                             answerCorrect = true
                             answered = true
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("True")
@@ -58,6 +63,7 @@ struct HistoryEasy: View {
                             
                             answerCorrect = false
                             answered = true
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("False")
@@ -72,6 +78,7 @@ struct HistoryEasy: View {
                             
                             answerCorrect = false
                             answered = true
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("True")
@@ -85,6 +92,8 @@ struct HistoryEasy: View {
                             
                             answerCorrect = true
                             answered = true
+                            correctEasy += 1
+                            questionsAnswered += 1
                             
                         }, label: {
                             Text("False")
