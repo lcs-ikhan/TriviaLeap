@@ -27,6 +27,7 @@ struct TriviaLeapApp: App {
                     .tabItem {
                         Label("Previous Questions", systemImage: "chart.bar.fill")
                     }
+                    .environment(\.blackbirdDatabase, AppDatabase.instance)
             }
             
         }
