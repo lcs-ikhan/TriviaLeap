@@ -11,7 +11,6 @@
 		855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */; };
 		855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */; };
 		855AC0842A2F9579005B2BEF /* HistoryHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC0832A2F9579005B2BEF /* HistoryHard.swift */; };
-		8587422B2A32904200505C96 /* PreviousQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587422A2A32904200505C96 /* PreviousQuestions.swift */; };
 		858742342A3355EC00505C96 /* SavedTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858742332A3355EC00505C96 /* SavedTrivia.swift */; };
 		858742372A3357D700505C96 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 858742362A3357D700505C96 /* Blackbird */; };
 		858742392A33582900505C96 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 858742382A33582900505C96 /* db.sqlite */; };
@@ -33,7 +32,6 @@
 		855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMedium.swift; sourceTree = "<group>"; };
 		855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSerciceHHard.swift; sourceTree = "<group>"; };
 		855AC0832A2F9579005B2BEF /* HistoryHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHard.swift; sourceTree = "<group>"; };
-		8587422A2A32904200505C96 /* PreviousQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousQuestions.swift; sourceTree = "<group>"; };
 		858742332A3355EC00505C96 /* SavedTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTrivia.swift; sourceTree = "<group>"; };
 		858742382A33582900505C96 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		8587423A2A33588C00505C96 /* AppDatbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatbase.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			children = (
 				85B1264A2A2922EB00DC74F9 /* SubjectsView.swift */,
 				85B1264C2A29234E00DC74F9 /* StatsView.swift */,
-				8587422A2A32904200505C96 /* PreviousQuestions.swift */,
 				8587423E2A335A5200505C96 /* SavedView.swift */,
 				85B1264F2A2BD7A500DC74F9 /* Second Views */,
 			);
@@ -248,7 +245,6 @@
 				85B1265B2A2BFD7D00DC74F9 /* Trivia.swift in Sources */,
 				85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */,
 				8587423F2A335A5200505C96 /* SavedView.swift in Sources */,
-				8587422B2A32904200505C96 /* PreviousQuestions.swift in Sources */,
 				858742342A3355EC00505C96 /* SavedTrivia.swift in Sources */,
 				855AC0842A2F9579005B2BEF /* HistoryHard.swift in Sources */,
 			);

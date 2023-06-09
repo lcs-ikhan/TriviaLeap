@@ -147,6 +147,21 @@ struct HistoryEasy: View {
                         }
                         questions = await NetworkServiceHEasy.fetch()
                     }
+                    Task{
+                        // Write to database
+                        if exampleSave != exampleSave{
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers, id) VALUES (?,?,?,?,?,?,?)",
+                                               exampleSave.category,
+                                               exampleSave.type,
+                                               exampleSave.difficulty,
+                                               exampleSave.question,
+                                               exampleSave.correct_answer,
+                                               exampleSave.incorrect_answers,
+                                               exampleSave.id)
+                            }
+                        }
+                    }
                     
                     answered = false
                 }, label: {
@@ -155,26 +170,16 @@ struct HistoryEasy: View {
                 .opacity(answered == false ? 0.0 : 1.0)
                 .buttonStyle(.bordered)
                 
-                Button(action: {
-                    Task{
-                        // Write to database
-                        if exampleSave != exampleSave{
-                            try await db!.transaction { core in
-                                try core.query("INSERT INTO SavedTrivia (category, type, difficulty, question, correct_answer, incorrect_answers) VALUES (?,?,?,?,?,?)",
-                                               exampleSave.category,
-                                               exampleSave.type,
-                                               exampleSave.difficulty,
-                                               exampleSave.question,
-                                               exampleSave.correct_answer,
-                                               exampleSave.incorrect_answers)
-                            }
-                        }
-                    }
-                }, label: {
-                    Text("Save question")
-                })
-                
-                
+//                Button(action: {
+//
+//                }, label: {
+//                    Text("Save question")
+//                })
+//                .disabled(buttonOpacity == 0.0 ? true : false)
+//                .tint(.green)
+//                .buttonStyle(.borderedProminent)
+//
+//
             }
             .padding()
             

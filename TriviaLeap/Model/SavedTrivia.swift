@@ -8,13 +8,14 @@
 import Foundation
 import Blackbird
 
-struct SavedTrivia: Codable, BlackbirdModel {
+struct SavedTrivia: Codable, BlackbirdModel, Identifiable {
     @BlackbirdColumn var category: String
     @BlackbirdColumn var type: String
     @BlackbirdColumn var difficulty: String
     @BlackbirdColumn var question: String
     @BlackbirdColumn var correct_answer: String
     @BlackbirdColumn var incorrect_answers: String
+    @BlackbirdColumn var id: Int
 }
 
-let exampleSave = SavedTrivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: "True", incorrect_answers: "False")
+let exampleSave = SavedTrivia(category: "History", type: "boolean", difficulty: "easy", question: "The Spitfire originated from a racing plane.", correct_answer: "True", incorrect_answers: "False", id: 3)
