@@ -19,15 +19,9 @@ struct SavedView: View {
     
     
     var body: some View {
-        NavigationView{ List(savedQuestions.results) { question in
+        NavigationView{ List(savedQuestions.results.reversed()) { question in
             VStack(alignment: .leading) {
                 ListView(question: question)
-                //                Text(question.category)
-                //                    .bold()
-                //                Text(question.difficulty)
-                //                Text(question.question)
-                //                Text(question.correct_answer)
-                //            }
             }
         }
         .navigationTitle("Previous Questions")

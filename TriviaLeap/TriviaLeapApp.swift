@@ -18,14 +18,14 @@ struct TriviaLeapApp: App {
                         Label("Subjects", systemImage: "books.vertical.fill")
                     }
                 
-                StatsView()
-                    .tabItem {
-                        Label("Wisdom", systemImage: "chart.bar.fill")
-                    }
+//                StatsView()
+//                    .tabItem {
+//                        Label("Wisdom", systemImage: "chart.bar.fill")
+//                    }
                 
                 SavedView()
                     .tabItem {
-                        Label("Previous Questions", systemImage: "chart.bar.fill")
+                        Label("Previous Questions", systemImage: "questionmark.app")
                     }
                     .environment(\.blackbirdDatabase, AppDatabase.instance)
             }

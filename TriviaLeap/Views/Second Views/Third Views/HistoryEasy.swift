@@ -169,17 +169,7 @@ struct HistoryEasy: View {
                 })
                 .opacity(answered == false ? 0.0 : 1.0)
                 .buttonStyle(.bordered)
-                
-//                Button(action: {
-//
-//                }, label: {
-//                    Text("Save question")
-//                })
-//                .disabled(buttonOpacity == 0.0 ? true : false)
-//                .tint(.green)
-//                .buttonStyle(.borderedProminent)
-//
-//
+
             }
             .padding()
             
