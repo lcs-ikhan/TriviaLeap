@@ -16,6 +16,7 @@ struct SubjectsView: View {
                         Image("History")
                             .resizable()
                             .scaledToFit()
+                            .frame(width: 250, height:100)
                     }
                     
                     Text("History")

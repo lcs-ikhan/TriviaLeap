@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8500B67D2A34DDF4000342F6 /* MythologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500B67C2A34DDF4000342F6 /* MythologyView.swift */; };
+		8500B67F2A34DE0C000342F6 /* MythologyEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500B67E2A34DE0C000342F6 /* MythologyEasy.swift */; };
+		8500B6812A34DE17000342F6 /* MythologyMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500B6802A34DE17000342F6 /* MythologyMedium.swift */; };
+		8500B6832A34DE25000342F6 /* MythologyHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500B6822A34DE25000342F6 /* MythologyHard.swift */; };
 		855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */; };
 		855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */; };
 		855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8500B67C2A34DDF4000342F6 /* MythologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MythologyView.swift; sourceTree = "<group>"; };
+		8500B67E2A34DE0C000342F6 /* MythologyEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MythologyEasy.swift; sourceTree = "<group>"; };
+		8500B6802A34DE17000342F6 /* MythologyMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MythologyMedium.swift; sourceTree = "<group>"; };
+		8500B6822A34DE25000342F6 /* MythologyHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MythologyHard.swift; sourceTree = "<group>"; };
 		855AC07D2A2F936C005B2BEF /* NetworkServiceHMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceHMedium.swift; sourceTree = "<group>"; };
 		855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMedium.swift; sourceTree = "<group>"; };
 		855AC0812A2F953B005B2BEF /* NetworkSerciceHHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSerciceHHard.swift; sourceTree = "<group>"; };
@@ -62,6 +70,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8500B6842A34DE27000342F6 /* Mythology */ = {
+			isa = PBXGroup;
+			children = (
+				8500B67E2A34DE0C000342F6 /* MythologyEasy.swift */,
+				8500B6802A34DE17000342F6 /* MythologyMedium.swift */,
+				8500B6822A34DE25000342F6 /* MythologyHard.swift */,
+			);
+			path = Mythology;
+			sourceTree = "<group>";
+		};
+		8500B6852A34DE2F000342F6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				85B126532A2BD95400DC74F9 /* HistoryEasy.swift */,
+				855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */,
+				855AC0832A2F9579005B2BEF /* HistoryHard.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		855AC07C2A2F9344005B2BEF /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				85B126502A2BD7E200DC74F9 /* HistoryView.swift */,
+				8500B67C2A34DDF4000342F6 /* MythologyView.swift */,
 				85B126522A2BD93F00DC74F9 /* Third Views */,
 			);
 			path = "Second Views";
@@ -140,9 +169,8 @@
 		85B126522A2BD93F00DC74F9 /* Third Views */ = {
 			isa = PBXGroup;
 			children = (
-				85B126532A2BD95400DC74F9 /* HistoryEasy.swift */,
-				855AC07F2A2F93DD005B2BEF /* HistoryMedium.swift */,
-				855AC0832A2F9579005B2BEF /* HistoryHard.swift */,
+				8500B6852A34DE2F000342F6 /* History */,
+				8500B6842A34DE27000342F6 /* Mythology */,
 			);
 			path = "Third Views";
 			sourceTree = "<group>";
@@ -247,16 +275,20 @@
 				855AC0802A2F93DD005B2BEF /* HistoryMedium.swift in Sources */,
 				85B126542A2BD95400DC74F9 /* HistoryEasy.swift in Sources */,
 				858742422A337F0600505C96 /* ListView.swift in Sources */,
+				8500B6812A34DE17000342F6 /* MythologyMedium.swift in Sources */,
 				85B1264B2A2922EB00DC74F9 /* SubjectsView.swift in Sources */,
 				855AC0822A2F953C005B2BEF /* NetworkSerciceHHard.swift in Sources */,
+				8500B67D2A34DDF4000342F6 /* MythologyView.swift in Sources */,
 				855AC07E2A2F936C005B2BEF /* NetworkServiceHMedium.swift in Sources */,
 				85B126512A2BD7E300DC74F9 /* HistoryView.swift in Sources */,
 				85B1265E2A2D06FD00DC74F9 /* NetworkServiceHEasy.swift in Sources */,
+				8500B67F2A34DE0C000342F6 /* MythologyEasy.swift in Sources */,
 				85B1263D2A29224700DC74F9 /* TriviaLeapApp.swift in Sources */,
 				8587423B2A33588C00505C96 /* AppDatbase.swift in Sources */,
 				85B1265B2A2BFD7D00DC74F9 /* Trivia.swift in Sources */,
 				85B1264D2A29234E00DC74F9 /* StatsView.swift in Sources */,
 				8587423F2A335A5200505C96 /* SavedView.swift in Sources */,
+				8500B6832A34DE25000342F6 /* MythologyHard.swift in Sources */,
 				858742342A3355EC00505C96 /* SavedTrivia.swift in Sources */,
 				855AC0842A2F9579005B2BEF /* HistoryHard.swift in Sources */,
 			);
