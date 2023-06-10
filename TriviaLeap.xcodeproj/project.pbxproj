@@ -188,8 +188,8 @@
 		85B1265C2A2D06C700DC74F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				858742402A33755A00505C96 /* Abstraction */,
 				8587423A2A33588C00505C96 /* AppDatbase.swift */,
+				858742402A33755A00505C96 /* Abstraction */,
 				855AC07C2A2F9344005B2BEF /* History */,
 			);
 			path = Helpers;

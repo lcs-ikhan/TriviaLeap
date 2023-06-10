@@ -9,7 +9,19 @@ import SwiftUI
 
 struct MythologyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            NavigationLink(destination: HistoryEasy()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)){
+                Text("Easy")
+            }
+            NavigationLink(destination: MythologyMedium()){
+                Text("Medium")
+            }
+            
+            NavigationLink(destination: MythologyHard()){
+                Text("Hard")
+            }
+        }
     }
 }
 

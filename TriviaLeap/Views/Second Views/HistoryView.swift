@@ -15,11 +15,13 @@ struct HistoryView: View {
                 .environment(\.blackbirdDatabase, AppDatabase.instance)){
                 Text("Easy")
             }
-            NavigationLink(destination: HistoryMedium()){
+            NavigationLink(destination: HistoryMedium()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)){
                 Text("Medium")
             }
             
-            NavigationLink(destination: HistoryHard()){
+            NavigationLink(destination: HistoryHard()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)){
                 Text("Hard")
             }
         }
